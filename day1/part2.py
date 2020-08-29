@@ -4,7 +4,7 @@ def fuel(mass):
 
 def add_fuel(mass):
     s = fuel(mass)
-    if s < 9:
+    if fuel(s) < 1:
         return s
     return s + add_fuel(s)
 
