@@ -1,9 +1,3 @@
-"""
-right for part 1
-wrong for part 2
-"""
-
-
 def comp(n):
     s = str(n)
     for i in range(len(s) - 1):
@@ -31,9 +25,12 @@ def num_rep(n):
         else:
             count = 1
     for i in ans.values():
-        if i % 2 == 1 and len(ans) == 1:
-            return False
-    return True
+        if i == 2:
+            return True
+    return False
+
+
+print(num_rep(111122))
 
 
 def sol():
@@ -41,7 +38,7 @@ def sol():
     for i in range(152085, 670283):
         if len(set(str(i))) == len(str(i)):
             continue
-        if comp(i) and rep(i) and num_rep(i):
+        if comp(i) and num_rep(i):
             count += 1
     return count
 
